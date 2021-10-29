@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <br><br>
+    <center>
+        <font size="4" face="Arial Black"> Login </font>
+        <hr size="3" color="blue">
+        <table>
+            <tr>
+                <td> Username </td>
+                <td> <input type="text" name="username" id="username" required> </td>
+            </tr>
+            <tr>
+                <td> Password </td>
+                <td> <input type="password" name="password" id="password" required> </td>
+            </tr>
+            <tr>
+                <td> Department </td>
+                <td>
+                    <select name="department" id="department" required>
+                        <option value="HHRR">HHRR</option>
+                        <option value="TechnicalSupport">Technical Support</option>
+                        <option value="Security">Security</option>
+                        <option value="ApplicationDeveloper">Application Developer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"> <input type="button" value="Login" onclick="action()"> </td>
+            </tr>
+        </table>
+    </center>
+</body>
+<script>
+    function action(){
+        var len_username = document.getElementById("username").value.length;
+        var len_password = document.getElementById("password").value.length;
+
+        if (len_username == 0 || len_password == 0)
+        {
+            alert("username and password can't be empty")
+        }
+    }
+</script>
+</html>

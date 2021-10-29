@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <br><br>
+    <center>
+        <font size="4" face="Arial Black"> Register </font>
+        <hr size="3" color="blue">
+        <table>
+            <tr>
+                <td> Full Name </td>
+                <td> <input type="text" name="fullname" id="fullname" required> </td>
+            </tr>
+            <tr>
+                <td> Username </td>
+                <td> <input type="text" name="username" id="username" required> </td>
+            </tr>
+            <tr>
+                <td> Password </td>
+                <td> <input type="password" name="password" id="password" required> </td>
+            </tr>
+            <tr>
+                <td> Address </td>
+                <td> <input type="text" name="address" id="address" required> </td>
+            </tr>
+            <tr>
+                <td> Phone number </td>
+                <td> <input type="number" name="phonenumber" id="phonenumber" required> </td>
+            </tr>
+            <tr>
+                <td> Email </td>
+                <td> <input type="email" name="emailaddres" id="emailaddres" required> </td>
+            </tr>
+            <tr>
+                <td> Project name </td>
+                <td> <input type="text" name="projectname" id="projectname" required> </td>
+            </tr>
+            <tr>
+                <td> Years of experience </td>
+                <td> <input type="number" name="experience" id="experience" required> </td>
+            </tr>
+            <tr>
+                <td> Current salary </td>
+                <td>
+                    <select name="salary" id="salary" required>
+                        <option value="0-1000">0-1000</option>
+                        <option value="1001-2500">1001-2500</option>
+                        <option value="2501-5000">2501-5000</option>
+                        <option value="+5000">+5000</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> Post-graduate </td>
+                <td>
+                    <input type="checkbox" name="graduate_yes" id="graduate_no">
+                    <label for="graduate_yes">Yes</label>
+                    <input type="checkbox" name="graduate_no" id="graduate_no">
+                    <label for="graduate_no">No</label>
+                </td>
+            </tr>
+            <tr>
+            <td> Know languages </td>
+                <td>
+                    <input type="checkbox" name="spanish" id="spanish">
+                    <label for="spanish">Spanish</label><br>
+                    <input type="checkbox" name="english" id="english">
+                    <label for="english">English</label><br>
+                    <input type="checkbox" name="german" id="german">
+                    <label for="german">German</label><br>
+                    <input type="checkbox" name="hindi" id="hindi">
+                    <label for="hindi">Hindi</label><br>
+                    <label for="other_language">Other language:</label><br>
+                    <input type="text" name="other_language" id="other_language">
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"> <input type="button" value="Login" onclick="action()"> </td>
+            </tr>
+        </table>
+    </center>
+
+</body>
+<script>
+    function action(){
+        var len_username = document.getElementById("username").value.length;
+        var len_password = document.getElementById("password").value.length;
+
+        if (len_username == 0 || len_password == 0)
+        {
+            alert("username and password can't be empty")
+        }
+    }
+</script>
+</html>
